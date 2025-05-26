@@ -9,9 +9,9 @@ PostgreSQL হলো একটি উন্নত, ওপেন সোর্স 
 
 ### ৩. Explain the Primary Key and Foreign Key concepts in PostgreSQL.
 
-**Primary Key (প্রাথমিক কী):** এটি একটি টেবিলের প্রতিটি রো বা রেকর্ডকে ইউনিকভাবে চিহ্নিত করে। Primary Key-এর বৈশিষ্ট্য হলো এটি NULL হতে পারে না এবং সমস্ত ভ্যালু ইউনিক হতে হবে। একটি টেবিলে শুধুমাত্র একটি Primary Key থাকতে পারে। উদাহরণ: `CREATE TABLE students (student_id SERIAL PRIMARY KEY, name VARCHAR(100));` এখানে student_id হলো Primary Key।
+**Primary Key :** এটি একটি টেবিলের প্রতিটি রো বা রেকর্ডকে ইউনিকভাবে চিহ্নিত করে। Primary Key-এর বৈশিষ্ট্য হলো এটি NULL হতে পারে না এবং সমস্ত ভ্যালু ইউনিক হতে হবে। একটি টেবিলে শুধুমাত্র একটি Primary Key থাকতে পারে। উদাহরণ: `CREATE TABLE students (student_id SERIAL PRIMARY KEY, name VARCHAR(100));` এখানে student_id হলো Primary Key।
 
-**Foreign Key (বিদেশী কী):** এটি একটি টেবিলের ফিল্ড যা অন্য টেবিলের Primary Key-এর সাথে রিলেশন স্থাপন করে। Foreign Key রেফারেন্সিয়াল ইন্টিগ্রিটি বজায় রাখে, অর্থাৎ Foreign Key-এর ভ্যালু অবশ্যই রেফারেন্স টেবিলে বিদ্যমান থাকতে হবে। উদাহরণ: `CREATE TABLE enrollments (student_id INTEGER REFERENCES students(student_id));` এখানে student_id হলো Foreign Key যা students টেবিলের student_id কে রেফার করে।
+**Foreign Key :** এটি একটি টেবিলের ফিল্ড যা অন্য টেবিলের Primary Key-এর সাথে রিলেশন স্থাপন করে। Foreign Key রেফারেন্সিয়াল ইন্টিগ্রিটি বজায় রাখে, অর্থাৎ Foreign Key-এর ভ্যালু অবশ্যই রেফারেন্স টেবিলে বিদ্যমান থাকতে হবে। উদাহরণ: `CREATE TABLE enrollments (student_id INTEGER REFERENCES students(student_id));` এখানে student_id হলো Foreign Key যা students টেবিলের student_id কে রেফার করে।
 
 ### ৪. What is the difference between the VARCHAR and CHAR data types?
 
